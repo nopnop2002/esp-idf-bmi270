@@ -32,6 +32,19 @@ BMI270 Accelerometer Gyroscope module 6 Dof inertial Measurement Sensors.
 GND:i2c address is 0x68.   
 3.3V:i2c address is 0x69.   
 
+# Find the sensor
+We can find the sensor using [i2c-tools](https://github.com/espressif/esp-idf/tree/master/examples/peripherals/i2c/i2c_tools).   
+
+- Selcect SCL and SDA using menuconfig.   
+![Image](https://github.com/user-attachments/assets/5a5d46fd-ce1e-4199-acf4-c6b49abc2dd8)
+
+- Detect senser.   
+The i2c address for this sensor is 0x68 or 0x69.   
+![Image](https://github.com/user-attachments/assets/0cfbcbab-d640-467b-8bb0-cf5e6bd597b2)
+
+- Read register.   
+Register #0 for this sensor is 0x24.   
+![Image](https://github.com/user-attachments/assets/78effb4e-4338-42e9-be6c-f064aba1c448)
 
 # Get Euler angles from bmi270 using Kalman filter
 I used [this](https://github.com/TKJElectronics/KalmanFilter).
